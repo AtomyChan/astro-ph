@@ -109,6 +109,7 @@ def XKCDify(ax, mag=1.0,
             xaxis_arrow='+',
             yaxis_arrow='+',
             ax_extend=0.1,
+            loc='upper right',
             expand_axes=False):
     """Make axis look hand-drawn
 
@@ -232,7 +233,7 @@ def XKCDify(ax, mag=1.0,
         text.set_fontproperties(prop)
     
     # modify legend
-    ax.legend(prop = prop, loc='lower right')
+    ax.legend(prop = prop, loc=loc)
     leg = ax.get_legend()
     if leg is not None:
         leg.set_frame_on(False)
